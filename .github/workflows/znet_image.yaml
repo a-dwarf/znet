@@ -11,9 +11,11 @@ env:
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
       packages: write
+      attestations: write
 
     steps:
       - name: Checkout repository
@@ -42,4 +44,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ github.sha }}, latest
+          tags: latest
+          
