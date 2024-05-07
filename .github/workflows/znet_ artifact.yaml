@@ -24,7 +24,7 @@ jobs:
         go-version: ${{ matrix.go-version }}
 
     - name: Build
-      run: GOOS=$PLATFORM GOARCH=amd64 go build -o myapp-${{ matrix.platform }} ./cmd/myapp
+      run: GOOS=$PLATFORM GOARCH=amd64 go build -o myapp-${{ matrix.platform }}
       env:
         PLATFORM: ${{ matrix.platform }}
 
