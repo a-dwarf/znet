@@ -45,5 +45,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.sha }}
-
+          tags: ${{ steps.meta.outputs.shas }}
